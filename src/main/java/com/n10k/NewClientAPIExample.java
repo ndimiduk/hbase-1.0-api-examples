@@ -61,7 +61,7 @@ public class NewClientAPIExample extends Configured implements Tool {
   }
 
   public static void main(String[] argv) throws Exception {
-    int ret = ToolRunner.run(new OldClientAPIExample(), argv);
+    int ret = ToolRunner.run(new NewClientAPIExample(), argv);
     System.exit(ret);
   }
 }
