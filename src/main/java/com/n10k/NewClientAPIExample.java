@@ -49,7 +49,7 @@ public class NewClientAPIExample extends Configured implements Tool {
       table = connection.getTable(TABLE_NAME);
       // describe the data we want to write.
       Put p = new Put(Bytes.toBytes("someRow"));
-      p.add(CF, Bytes.toBytes("qual"), Bytes.toBytes(42.0d));
+      p.addColumn(CF, Bytes.toBytes("qual"), Bytes.toBytes(42.0d));
       // send the data.
       table.put(p);
     } finally {
